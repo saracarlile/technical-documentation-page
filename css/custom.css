@@ -205,4 +205,12 @@ header, footer {
         padding: 100px 5px;
         grid-template-columns: 340px auto;
     }
+    .pre {
+        padding: 10px 10px;    
+        width: 370px;
+    }
+    .pre-layout {
+        padding: 10px 10px;    
+        width: 370px;
+    }
   }
