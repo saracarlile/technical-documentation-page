@@ -199,3 +199,10 @@ header, footer {
         padding: 15px;
     }
   }
+
+  @media only screen and (max-width: 400px) {
+    .container {
+        padding: 100px 5px;
+        grid-template-columns: 340px auto;
+    }
+  }
