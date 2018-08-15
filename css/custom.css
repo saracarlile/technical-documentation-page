@@ -1,0 +1,201 @@
+body {
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    padding: 100px 50px;
+    display: grid;
+    grid-template-columns: 400px auto;
+    grid-column-gap: 45px;
+    grid-template-areas: "sidebar main";
+    min-width: 290px;
+}
+
+header {
+    color: black;
+    font-size: 1.8em;
+    line-height: 2em;
+    padding-left: 20px;
+    font-weight: 600;
+}
+
+#first-header {
+    padding-top: 20px;
+}
+
+#nav-ul {
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: repeat(6, 1fr);
+}
+
+#nav-ul li {
+    padding: 20px;
+    line-height: 34px;
+    font-size: 19px;
+    margin-bottom: 0px;
+}
+
+.nav-link {
+    color: rgb(66, 66, 64);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-link:active, .nav-link:hover {
+    animation-duration: 50ms;
+    animation-name: hover;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hover {
+    100% {
+        font-weight: 800;
+        transform: scale(2, 0.5);
+    }
+}
+
+#main-doc {
+    padding-top: 50px;
+    min-width: 320px;
+}
+
+.main-section p {
+    font-size: 18px;
+    line-height: 26px;
+    padding-left: 20px;
+    color: #262626
+}
+
+.pre {
+    background-color: #292929;
+    padding: 20px 30px;
+    margin-left: 20px;
+    width: 400px;
+    margin-bottom: 30px;
+}
+
+.pre-html {
+    padding: 20px 30px;
+    margin-left: 20px;
+    width: 400px;
+    margin-bottom: 30px;
+}
+
+.code {
+    color: #cd6a51;
+    display: flex;
+    flex-direction: column;
+}
+
+.selector {
+    color: #E3C700;
+    margin-right: 10px;
+    text-align: left;
+}
+
+.punctuation {
+    color: #FCFBF5;
+}
+
+.property {
+    color: #9b869c;
+}
+
+.code div {
+    margin-bottom: 10px;
+}
+
+.grid-list {
+    margin-left: 50px;
+    list-style-type: disc;
+}
+
+.pre-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.container-columns {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+}
+
+.container-columns div {
+    border: 1px solid #9b869c;
+    background-color: white;
+    padding: 10px;
+}
+
+.container-rows {
+    display: grid;
+    grid-template-rows: 100px 100px 100px;
+}
+
+.container-rows div {
+    border: 1px solid #9b869c;
+    background-color: white;
+    padding: 10px;
+}
+
+.container-rows-with-gap {
+    display: grid;
+    background-color: #A6E945;
+    grid-template-rows: 60px 60px 60px;
+    grid-row-gap: 10px;
+}
+
+.container-rows-with-gap div {
+    background-color: white;
+    border: 1px solid #9b869c;
+    padding: 10px;
+}
+
+.pre-layout {
+    background-color: #292929;
+    padding: 20px 30px;
+    margin-left: 20px;
+    width: 400px;
+    margin-bottom: 30px;
+}
+
+.container-for-layout {
+    display: grid;
+    grid-template-columns: 80px auto 80px;
+    grid-template-rows: repeat(3, 100px);
+    grid-gap: 10px;
+}
+
+.container-for-layout header, .container-for-layout footer {
+    background-color: white;
+    padding: 10px;
+}
+
+.container-for-layout article, .container-for-layout aside {
+    background-color: whitesmoke;
+    padding: 8px;
+}
+
+header, footer {
+    grid-column: 1 / 4;
+}
+
+#layout-header {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media only screen and (max-width: 700px) {
+    sidebar, main {
+        grid-column: 1 / 3;
+    } 
+    #main-doc {
+        padding-top: 0px;
+    }
+    #nav-ul li {
+        padding: 15px;
+    }
+  }

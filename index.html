@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<!-- https://flaviocopes.com/css-grid/ -->
+<!-- https://stackoverflow.com/questions/43962371/align-code-line-numbers-with-css -->
+
+<head>
+	<title>Technical Documentation</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"</script>
+		<![endif]-->
+
+	<link rel="stylesheet" type="text/css" href="./css/styles.css">
+	<link rel="stylesheet" type="text/css" href="./css/custom.css">
+</head>
+
+<body>
+	<div class="container">
+		<nav id="navbar">
+			<header>CSS Grid</header>
+			<ul id="nav-ul">
+				<li><a class="nav-link" href="#Modern_layouts_with_CSS_Grid">Modern layouts with CSS Grid</a></li>
+				<li><a class="nav-link" href="#Make_a_grid">Make a grid</a></li>
+				<li><a class="nav-link" href="#Grid_Columns">Grid Columns</a></li>
+				<li><a class="nav-link" href="#Grid_Rows">Grid Rows</a></li>		
+				<li><a class="nav-link" href="#Gutters">Gutters</a></li>
+				<li><a class="nav-link" href="#Layouts">Layouts</a></li>
+			</ul>
+		</nav>
+		<main id="main-doc">
+			<section class="main-section" id="Modern_layouts_with_CSS_Grid">
+				<header id="first-header">Modern layouts with CSS Grid</header>
+				<p>CSS Grid is the a new CSS module that is designed to help solve layout problems that website developers have been
+					facing for a long time. CSS Grid is now supported in the current version of all major browsers, which means right now
+					is a great time to learn and use CSS Grid in your projects.
+				</p>
+				<p>You may have already learned how to build layouts using Flexbox, which is great. The basic difference between CSS
+					Grid Layout and CSS Flexbox Layout is that Flexbox was designed for a layout in one dimension -- meaning either a row
+					<em>or</em> a column. Grid was designed for two-dimensional layouts -- rows <em>and</em> columns.
+				</p>
+			</section>
+			<section class="main-section" id="Make_a_grid">
+				<header>Make a grid</header>
+				<p>To create a grid, use the <em>display</em> property to establish a new grid.</p>
+				<p>Values:</p>
+				<ul class="grid-list">
+					<li><b>grid</b> - generates a block-level grid</li>
+					<li><b>inline-grid</b> - generates an inline-level grid</li>
+				</ul>
+				<div class="pre-wrapper">
+					<div class="pre">
+						<code class="code">
+							<div class="selector">
+								.container <span class="punctuation">{</span>
+							</div>
+							<div>
+								<span class="property">display</span>
+								<span class="punctuation">:</span>
+								grid
+								<span class="punctuation">;</span>
+							</div>
+							<div class="punctuation">
+								}
+							</div>
+						</code>
+					</div>
+				</div>
+			</section>
+			<section class="main-section" id="Grid_Columns">
+				<header>Grid Columns</header>
+				<p>The <em>grid-template-columns</em> CSS property defines sizing and name functions of the grid columns.
+					<p>
+						<div class="pre-wrapper">
+							<div class="pre">
+								<code class="code">
+									<div class="selector">
+										.container <span class="punctuation">{</span>
+									</div>
+									<div>
+										<span class="property">display</span>
+										<span class="punctuation">:</span>
+										grid
+										<span class="punctuation">;</span>
+									</div>
+									<div>
+									<span class="property">grid-template-columns</span>
+										<span class="punctuation">:</span>
+										100px 100px 100px
+										<span class="punctuation">;</span>
+									</div>
+									<div>
+									<span class="property">background-color</span>
+										<span class="punctuation">:</span>
+										white;
+										<span class="punctuation">;</span>
+									</div>
+									<div class="punctuation">
+											}
+									</div>
+							</code>
+						</div>
+						<div class="pre">
+							<div class="container-columns">
+								<div>Column 1</div>
+								<div>Column 2</div>
+								<div>Column 3</div>
+							</div>
+						</div>
+					</div>
+			</section>
+			<section class="main-section" id="Grid_Rows">
+				<header>Grid Rows</header>
+				<p>The <em>grid-template-rows</em> CSS property defines sizing and name functions of the grid rows.
+				</p>
+						<div class="pre-wrapper">
+							<div class="pre">
+								<code class="code">
+									<div class="selector">
+										.container <span class="punctuation">{</span>
+									</div>
+									<div>
+										<span class="property">display</span>
+										<span class="punctuation">:</span>
+										grid
+										<span class="punctuation">;</span>
+									</div>
+									<div>
+									<span class="property">grid-template-rows</span>
+										<span class="punctuation">:</span>
+										100px 100px 100px
+										<span class="punctuation">;</span>
+									</div>
+									<div class="punctuation">
+											}
+									</div>
+								</code>
+							</div>
+							<div class="pre">
+								<div class="container-rows">
+									<div>Column 1</div>
+									<div>Column 2</div>
+									<div>Column 3</div>
+								</div>
+							</div>
+						</div>
+			</section>
+			<section class="main-section" id="Gutters">
+				<header>Gutters</header>
+				<p>Gutters or alleys are the spaces between grid rows and columns.
+				</p>
+				<p>Ways to define gutters:</p>
+				<ul class="grid-list">
+					<li><b>grid-column-gap</b> - size of the gap (gutter) between an element's columns</li>
+					<li><b>grid-row-gap</b> - size of the gap (gutter) between an element's rows</li>
+					<li><b>grid-gap</b> - shorthand for grid-column-gap and grid-row-gap</li>
+				</ul>
+						<div class="pre-wrapper">
+							<div class="pre">
+								<code class="code">
+									<div class="selector">
+										.container <span class="punctuation">{</span>
+									</div>
+									<div>
+										<span class="property">display</span>
+										<span class="punctuation">:</span>
+										grid
+										<span class="punctuation">;</span>
+									</div>
+									<div>
+									<span class="property">grid-template-rows</span>
+										<span class="punctuation">:</span>
+										60px 60px 60px
+										<span class="punctuation">;</span>
+									</div>
+									<div>
+										<span class="property">grid-row-gap</span>
+											<span class="punctuation">:</span>
+											10px 
+											<span class="punctuation">;</span>
+										</div>
+									<div class="punctuation">
+										}
+									</div>
+								</code>
+							</div>
+							<div class="pre">
+								<div class="container-rows-with-gap">
+									<div>Column 1</div>
+									<div>Column 2</div>
+									<div>Column 3</div>
+								</div>
+							</div>
+						</div>
+			</section>
+			<section class="main-section" id="Layouts">
+				<header>Layouts</header>
+				<p>Here an example layout patterns using CSS Grid.
+				</p>
+				<p><strong>Holy Grail Layout</strong> -- a header, footer, 2 side-bars and a main content container.</p>
+						<div class="pre-wrapper">
+							<div class="pre">
+								<code class="code">
+									<div class="selector">
+										.container <span class="punctuation">{</span>
+									</div>
+									<div>
+										<span class="property">display</span>
+										<span class="punctuation">:</span>
+										grid
+										<span class="punctuation">;</span>
+									</div>
+									<div>
+										<span class="property">grid-template-columns:</span>
+										<span class="punctuation">:</span>
+										80px auto 80px;
+										<span class="punctuation">;</span>
+									</div>
+									<div>
+									<span class="property">grid-template-rows</span>
+										<span class="punctuation">:</span>
+										repeat(3, 100px);
+										<span class="punctuation">;</span>
+									</div>
+									<div>
+										<span class="property">grid-row-gap</span>
+											<span class="punctuation">:</span>
+											10px 
+											<span class="punctuation">;</span>
+										</div>
+									<div class="punctuation">
+										}
+									</div>
+									<div class="selector">
+											header, footer <span class="punctuation">{</span>
+										</div>
+										<div>
+											<span class="property">grid-column:</span>
+											<span class="punctuation">:</span>
+											1/4
+											<span class="punctuation">;</span>
+										</div>
+										<div class="punctuation">
+											}
+										</div>
+								</code>
+							</div>
+							<div class="pre-layout">
+								<div class="container-for-layout">
+									<header id="layout-header">Header</header>
+									<aside>Sidebar</aside>
+									<article>Article</article>
+									<aside>Sidebar</aside>
+									<footer>Footer</footer>
+								</div>
+							</div>
+						</div>
+			</section>
+		</main>
+	</div>
+
+	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
