@@ -24,10 +24,16 @@ header {
     padding-top: 20px;
 }
 
+.fixed-header {
+    position: fixed;
+    top: 30px;
+}
+
 #nav-ul {
     display: grid;
-    grid-template-columns: 1;
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
+    position: fixed;
 }
 
 #nav-ul li {
